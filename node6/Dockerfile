@@ -1,4 +1,4 @@
-FROM node:6.11.0-alpine
+FROM node:6.11.5-alpine
 
 ENV PKGNAME=graphicsmagick
 ENV PKGVER=1.3.25
