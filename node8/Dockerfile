@@ -1,7 +1,7 @@
-FROM node:8.9.0-alpine
+FROM node:8.11.4-alpine
 
 ENV PKGNAME=graphicsmagick
-ENV PKGVER=1.3.25
+ENV PKGVER=1.3.30
 ENV PKGSOURCE=http://downloads.sourceforge.net/$PKGNAME/$PKGNAME/$PKGVER/GraphicsMagick-$PKGVER.tar.lz
 
 RUN apk add --update g++ \
@@ -16,7 +16,7 @@ RUN apk add --update g++ \
                      libpng-dev \
                      libtool \
                      libgomp \
-            --repository http://nl.alpinelinux.org/alpine/v3.4/main/ && \
+            --repository http://nl.alpinelinux.org/alpine/v3.6/main/ && \
     wget $PKGSOURCE --no-check-certificate && \
     lzip -d -c GraphicsMagick-$PKGVER.tar.lz | tar -xvf - && \
     cd GraphicsMagick-$PKGVER && \
